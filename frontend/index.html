@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Forecast</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href = "style.css">
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="icon" href="icon/title.jpg">
+</head>
+<body>
+  <div class= "nav-con">
+   <div class="nav-bar">
+     <img src="icon/cloudy.jpg" width="140px" height="90px">
+   </div>
+ <!--nav-bar end----->
+ </div>
+ <!---nav-con end---------->
+  <div class="container">
+   <div class ="interface">
+        <img src="icon/search.jpg"  width="40px" height="40px">
+        <input type="text" id="place" placeholder="Search city,Place">
+        <button onclick="weather(document.querySelector('#place').value)">Get Update</button>
+        <h5>Current Date and Time is <br/><span id='date-time'></span></h5>
+        <h1>Different kind of Weather</h1>
+        <h1>inside of 24/7 hours</h1>
+      <div class="news">
+         <p>Sunshine is delicious, rain is refreshing,</p>
+         <p>wind braces us up, snow is exhilarating;</p>
+         <p>there is really no such thing as bad weather,</p>
+         <p>only different kinds of good weather.</p>
+      </div>
+   <!---news end---------->
+     </div>
+   <!----interface end------->
+     <div class="info">
+       <div class="header">
+            <h1>Today weather Report</h1>
+        </div>
+  <!----header end------------------->
+    <div class="report">
+        <img src="icon/NA.jpg" id="weather"  class="img-rounded" width="200px" height="100px">
+        <span  id="description"></span>
+    </div>
+      <div class="output">
+       <div class="digit">
+         <h1 id="deg">0&deg;C</h1>
+         <span id="min">0&deg;C</span>
+         <span id="max">/ 0&deg;F</span>
+    </div>
+    <!----digit end----->
+      <div class="list_info">
+           <h3 id="wind">0 mph</h3>
+           <h3 id="humidity">0 %</h3>
+      </div>
+      <!----list_info end----->
+
+    </div>
+ <!----output end---->
+     <div class="convertor">
+        <span id ="celsius" onclick="con('celsius')">&deg;C</span>
+        <span id ="fahrenheit" onclick="con('fahrenheit')">| &deg;F</span>
+     </div>
+     <!---convertor end----->  
+   </div>
+  <!----info end------->
+</div>
+<! ----container end------>
+</body>
+</html>
